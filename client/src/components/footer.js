@@ -1,4 +1,4 @@
-function Footer() {
+const Footer=()=> {
     return (
       <div className="footer">
         <p>&copy; 2023 My Company, Inc.</p>
