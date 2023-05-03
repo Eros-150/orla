@@ -1,7 +1,7 @@
 const Footer=()=> {
     return (
       <div className="footer">
-        <p>&copy; 2023 My Company, Inc.</p>
+        <p>&copy; 2023 2DAW Monlau</p>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about">About Us</a></li>
