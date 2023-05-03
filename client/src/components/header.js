@@ -1,7 +1,9 @@
+import Nav from 'react-bootstrap/Nav';
+
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand mx-2" href="#">
         Navbar
       </a>
       <button
@@ -24,9 +26,8 @@ const Header = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Quienes Somos
-            </a>
+          <Nav.Link href="/Home" className="text-white">Quienes somos</Nav.Link>
+            
           </li>
         </ul>
       </div>
