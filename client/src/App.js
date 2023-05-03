@@ -6,7 +6,6 @@ import Header from "./components/header.js";
 function App() {
   return (
     <div className="App">
-      aaaa
       <Header />
     </div>
   );
