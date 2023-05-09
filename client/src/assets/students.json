@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Eros",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "imageUrl": "./images/eros.png"
+    },
+    {
+        "id": 2,
+        "title": "Zeji",
+        "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "imageUrl": "https://media.licdn.com/dms/image/D4D03AQEKGEJAYbfnPw/profile-displayphoto-shrink_200_200/0/1666113651999?e=1688601600&v=beta&t=wBo_S3GV1Si6_qnKSyh8JzCfyvsGsS4xu994OgqgTPc"
+    },
+    {
+        "id": 3,
+        "title": "Joan",
+        "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "imageUrl": "https://media.licdn.com/dms/image/D4D03AQE-8VETv3H45A/profile-displayphoto-shrink_200_200/0/1675171268466?e=1688601600&v=beta&t=K8mYA9Rhaf62sqgLf02ejZET2ujEnwY2sp_iFmwoEvU"
+    }
+]
