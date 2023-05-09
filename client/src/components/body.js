@@ -3,7 +3,7 @@ import React from 'react';
 const body = ({ image, title, description }) => {
     return (
         <div className='card'>
-            <img src={"../src/assets/logo.png"} alt={title} />
+            <img src={"https://media.licdn.com/dms/image/D4D03AQEKGEJAYbfnPw/profile-displayphoto-shrink_200_200/0/1666113651999?e=1689206400&v=beta&t=mo2juFmxD_RnawCDLdAoZu_plvDkMNxn5ZitbYV2LkM"} alt={title} />
             <div className='card-body'>
                 <h5 className='card-title'>Nombre del alumno1{title}</h5>
                 <p className='card-text'>Descripción{description}</p>
