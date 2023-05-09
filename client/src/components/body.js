@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import '../css/body.css';
 import ImageGrid from './imageGrid';
 

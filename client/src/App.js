@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Header from "./components/header.js";
 import Body from "./components/body.js";
 import Footer from "./components/footer.js";
+import Body from "./components/body.js";
 
 function App() {
   return (
