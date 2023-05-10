@@ -1,17 +1,26 @@
-import React from 'react';
-import './App.css';
-import json from "./components/alumnos.json"
-import Orla from './components/orla';
-import 'bootstrap/dist/css/bootstrap.css';
+import React from "react";
+import "./App.css";
+import jsonAlumnos from "./components/alumnos.json";
+import jsonProfes from "./components/profes.json";
+
+import Orla from "./components/orla";
+import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-
-const App=()=>  {
+const App = () => {
   return (
-    <div className='container'>
-    <Orla alumns={json.alumns} />
-    </div>
+    <>
+      <div className="container">
+        <h1 className="text-center">PROFESORADO</h1>
+        <Orla persons={jsonProfes.profes} />
+
+        <h1 h1 className="text-center">
+          ALUMNOS
+        </h1>
+        <Orla persons={jsonAlumnos.alumns} />
+      </div>
+    </>
   );
-}
+};
 
 export default App;

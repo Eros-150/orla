@@ -3,26 +3,27 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Row, Col, Image, Modal, Accordion } from "react-bootstrap";
 import {} from "react-bootstrap";
-import AlumnModal from "./Modal/alumnModal";
-const Orla = ({ alumns }) => {
-  const [alumnoSeleccionado, setAlumnoSeleccionado] = useState(null);
+import ModalAlumno from "./Modal/ModalAlumno";
 
-  const handleClick = (alumno) => {
-    setAlumnoSeleccionado(alumno);
+const Orla = ({ persons }) => {
+  const [personaSeleccionada, setPersonaSeleccionada] = useState(null);
+
+  const handleClick = (persona) => {
+    setPersonaSeleccionada(persona);
   };
 
   const handleClose = () => {
-    setAlumnoSeleccionado(null);
+    setPersonaSeleccionada(null);
   };
 
   return (
     <div className="row">
-      {alumns.map((alumno) => (
-        <div className="col-md-2" key={alumno.id}>
-          <div className="card" onClick={() => handleClick(alumno)}>
+      {persons.map((persona) => (
+        <div className="col-md-2" key={persona.id}>
+          <div className="card" onClick={() => handleClick(persona)}>
             <Image
-              src={alumno.image}
-              alt={alumno.nombre}
+              src={persona.image}
+              alt={persona.nombre}
               rounded
               className="img-fluid card-img-top"
               thumbnail
@@ -30,15 +31,17 @@ const Orla = ({ alumns }) => {
             />
 
             <div className="card-body">
-              <h5 className="card-title text-center">{alumno.nombre}</h5>
+              <h5 className="card-title text-center">{persona.nombre}</h5>
             </div>
           </div>
 
-          <AlumnModal
-            alumno={alumno}
-            alumnoSeleccionado={alumnoSeleccionado}
-            handleClose={handleClose}
-          />
+
+          <ModalAlumno
+          persona={persona}
+          personaSeleccionada={personaSeleccionada}
+          handleClose={handleClose}/>
+
+
         </div>
       ))}
     </div>
