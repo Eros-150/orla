@@ -8,15 +8,18 @@
       "proyectos": [
         {
           "nombre": "Proyecto 1",
-          "descripcion": "Descripción del proyecto 1"
+          "descripcion": "Descripción del proyecto 1",
+          "url":"https://www.youtube.com/"
         },
         {
           "nombre": "Proyecto 2",
-          "descripcion": "Descripción del proyecto 2"
+          "descripcion": "Descripción del proyecto 2",
+          "url":"https://www.youtube.com/"
         },
         {
           "nombre": "Proyecto 3",
-          "descripcion": "Descripción del proyecto 3"
+          "descripcion": "Descripción del proyecto 3",
+          "url":"https://www.youtube.com/"
         }
       ],
       "contacto": {

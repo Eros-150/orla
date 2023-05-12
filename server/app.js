@@ -1,38 +1,52 @@
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
-const Alumnn = require('./src/models/alumn');
-const fs = require('fs');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-  res.send("HOLA pepe");
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "http://localhost"],
+    methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
+    credentials: true,
+  })
+);
+
+mongoose.connect("mongodb+srv://eros:Joiser12@erosm6.x3lql.mongodb.net/orla", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
-/* PARA SACAR LA INFO DE UN ALUMNO*/
-app.get('/alumnos/:id', (req, res) => {
-  // leer el archivo JSON
-  fs.readFile('./ruta/alumnos.json', 'utf-8', (err, data) => {
-    if (err) {
-      console.log(err);
-      res.status(500).send('Error al leer el archivo JSON');
-    } else {
-      // parsear el JSON a un objeto JavaScript
-      const alumnos = JSON.parse(data);
+const db = mongoose.connection;
 
-      // buscar el objeto con la ID correspondiente
-      const alumno = alumnos.find((a) => a.id === parseInt(req.params.id));
+db.on("error", console.error.bind(console, "Connection error:"));
 
-      if (alumno) {
-        // crear un nuevo objeto Alumnn con los datos del alumno encontrado
-        const alumnn = new Alumnn(alumno.id, alumno.nombre, alumno.descripcion, alumno.proyectos, alumno.contacto);
+db.once("open", () => {
+  console.log("MongoDB database connection established successfully");
+});
 
-        // enviar el objeto Alumnn como respuesta
-        res.json(alumnn);
-      } else {
-        res.status(404).send('No se encontró ningún alumno con la ID proporcionada');
-      }
-    }
-  });
+app.post("/api/proyectos", async (req, res) => {
+  const { name, nameProject, description, url } = req.body;
+
+  console.log(name + " " + nameProject + " " + description + " " + url);
+
+  try {
+    const usuario = await db
+      .collection("alumns")
+      .findOneAndUpdate(
+        { nombre: name },
+        { $push: { proyectos: { nameProject, description, url } } },
+        { new: true }
+      );
+
+    res.json(usuario);
+  } catch (error) {
+    res.status(500).json({ mensaje: "Error al actualizar usuario", error });
+  }
 });
 
 app.listen(3000, () => {

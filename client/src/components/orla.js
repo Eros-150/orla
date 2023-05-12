@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Row, Col, Image, Modal, Accordion } from "react-bootstrap";
 import {} from "react-bootstrap";
-import ModalAlumno from "./Modal/ModalAlumno";
+import ModalPersona from "./Modal/ModalPersona";
 
 const Orla = ({ persons }) => {
   const [personaSeleccionada, setPersonaSeleccionada] = useState(null);
@@ -36,7 +36,7 @@ const Orla = ({ persons }) => {
           </div>
 
 
-          <ModalAlumno
+          <ModalPersona
           persona={persona}
           personaSeleccionada={personaSeleccionada}
           handleClose={handleClose}/>
