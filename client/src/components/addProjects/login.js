@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Card, Form, Button, Container, Row, Col, Image } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import axios from "axios";
 import "../../App.css";
 import FormProjects from "./FormProjects";
