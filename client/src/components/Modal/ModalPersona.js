@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import "../../App.css"
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Row, Col, Image, Modal, Accordion } from "react-bootstrap";
-import {} from "react-bootstrap";
+import { } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faUserGraduate } from "@fortawesome/free-solid-svg-icons";
+
 
 const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
   let date = new Date();
@@ -16,8 +22,8 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <Modal.Title className="text-center" style={{ marginBottom: "5%" }}>
-            <div style={{ textTransform: "uppercase" }}>{persona.nombre}</div>
+          <Modal.Title className="text-center">
+              <h1 className="modalTitle">{persona.nombre}</h1>
           </Modal.Title>
           <div className="text-center">
             <Image
@@ -41,7 +47,7 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
                   <Accordion.Header>PROYECTOS</Accordion.Header>
                   <Accordion.Body>
                     {persona.proyectos.map((proyecto) => (
-                      <div key={proyecto.nombre}>
+                      <div className="proyecto-container">
                         <a href={proyecto.url}><h4>{proyecto.nombre}</h4></a>
                         <p>{proyecto.descripcion}</p>
                       </div>
@@ -56,10 +62,15 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
                 <Accordion.Item eventKey={0}>
                   <Accordion.Header>LICENCIATURAS</Accordion.Header>
                   <Accordion.Body>
-                    <ul>
-                    {Object.keys(persona.licenciaturas).map((key) => (
-                      <li className="text-center" key={key}>{persona.licenciaturas[key]}</li>
-                    ))}
+                    <ul className="list-group">
+                      {persona.licenciaturas.map((licenciatura) => (
+                        <div>
+                          <li className="list-group-item d-flex justify-content-between align-items-center">
+                            <FontAwesomeIcon icon={faUserGraduate} />{licenciatura.titulo}
+                            <span className="badge bg-info rounded-pill text-light">{licenciatura.universidad}</span>
+                          </li>
+                        </div>
+                      ))}
                     </ul>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -70,8 +81,11 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
               <Accordion.Item eventKey={0}>
                 <Accordion.Header>CONTACTO</Accordion.Header>
                 <Accordion.Body>
-                  <p>Email: {persona.contacto.email}</p>
-                  <p>Linkedin: {persona.contacto.linkedin}</p>
+                  <div>
+                    <a href="mailto:{persona.contacto.email}">
+                      <FontAwesomeIcon icon={faEnvelope} fade size="2xl" /></a>
+                    <a href="{persona.contacto.linkedin}"><FontAwesomeIcon icon={faLinkedinIn} fade size="2xl" /></a>
+                  </div>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
