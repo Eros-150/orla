@@ -1,41 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import axios from "axios";
-
-import Orla from "./components/orla";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import FormProjects from "./components/addProjects/FormProjects";
 import Login from "./components/addProjects/login";
+import CompleteOrla from "./components/Orla/CompleteOrla";
+import { Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer/footer";
+import Header from "./components/Header/header";
+import About from "./components/about/About";
+import Home from "./components/Home/Home";
+
 const App = () => {
-  const [alumnos, setAlumnos] = useState([]);
-  const [profes, setProfes] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:3001/api/alumnos")
-    .then((res) => setAlumnos(res.data))
-    .catch((err) => console.log(err));
-
-      axios.get("http://localhost:3001/api/profes")
-      .then((res) => setProfes(res.data))
-      .catch((err) => console.log(err));
-    }, []);
   return (
     <>
-      <div className="container">
-   
-            <Login />
-
-        <h1 className="text-center title">
-          PROFESORADO
-        </h1>
-        <Orla persons={profes} />
-        <h1 h1 className="text-center title">
-          ALUMNOS
-        </h1>
-        <Orla persons={alumnos} />
-      </div>
-
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/orla" element={<CompleteOrla />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
     </>
   );
 };

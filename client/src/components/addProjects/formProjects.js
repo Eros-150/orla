@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Card, Form, Button, Container, Row, Col, Image } from "react-bootstrap";
+import {
+  Card,
+  Form,
+  Button,
+  Container,
+  Row,
+  Col,
+  Image,
+} from "react-bootstrap";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-
-import "../../App.css"
+import "../../App.css";
 
 const FormProjects = ({ username }) => {
   const URL = "http://localhost:3001/api/proyectos";
@@ -77,13 +84,17 @@ const FormProjects = ({ username }) => {
         </Form.Group>
 
         <div className="text-center">
-          <Button className="button-85" type="submit" style={{ marginTop: "5%" }}>
+          <Button
+            className="button-85"
+            type="submit"
+            style={{ marginTop: "5%" }}
+          >
             Enviar
           </Button>
         </div>
       </Form>
     </>
   );
-}
+};
 
 export default FormProjects;

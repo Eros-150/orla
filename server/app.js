@@ -3,16 +3,19 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 const Alumno = require("./src/models/alumns");
 const Profesor = require("./src/models/teachers");
+session = require('express-session');
+
+
 
 app.use(
   cors({
-    origin: ["http://localhost", "http://localhost:3000"],// CON ESTO DECIMOS DONDE ESTA EL CLIENTE
+    origin: ["http://localhost", "http://localhost:3000"], // CON ESTO DECIMOS DONDE ESTA EL CLIENTE
     methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
     credentials: true,
   })
@@ -45,19 +48,23 @@ const comparePassword = async (password, hashedPassword) => {
 app.put("/api/proyectos", async (req, res) => {
   const { name, nameProject, description, url } = req.body;
 
-  console.log("DATOS RECIBIDOS "+req.body);
+  console.log("DATOS RECIBIDOS " + req.body);
 
   try {
     const usuario = await db
       .collection("alumns")
       .findOneAndUpdate(
         { nombre: name },
-        { $push: { proyectos: { nombre: nameProject, descripcion: description, url } } },
+        {
+          $push: {
+            proyectos: { nombre: nameProject, descripcion: description, url },
+          },
+        },
         { new: true }
       );
 
     res.json(usuario);
-    console.log("REGISTRO ACTUALIZADO: " + name)
+    console.log("REGISTRO ACTUALIZADO: " + name);
   } catch (error) {
     res.status(500).json({ mensaje: "Error al actualizar usuario", error });
   }
@@ -81,15 +88,15 @@ app.get("/api/profes", async (req, res) => {
     console.log(err);
     res.status(500).send("Error al obtener los profesores");
   }
-
 });
 
-
-
-app.post("/api/login", async (req, res) => {/* PWD: 1234 */
+app.post("/api/login", async (req, res) => {
+  /* PWD: 1234 */
   const { name, password } = req.body;
   try {
-    const user = await db.collection("alumns").findOne({ nombre: name }, { pwd: 1 });
+    const user = await db
+      .collection("alumns")
+      .findOne({ nombre: name }, { pwd: 1 });
     if (user && user.nombre) {
       console.log(user.nombre);
       console.log("El usuario existe");
@@ -107,13 +114,11 @@ app.post("/api/login", async (req, res) => {/* PWD: 1234 */
     }
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: 'Ha ocurrido un error al actualizar la contraseña' });
+    return res
+      .status(500)
+      .json({ error: "Ha ocurrido un error al actualizar la contraseña" });
   }
-
-
-
 });
-
 
 app.listen(3001, () => {
   console.log("Servidor iniciado en el puerto 3001");
