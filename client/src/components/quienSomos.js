@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './quienSomos.css';
-import fotoeros from '../img/';
-import fotojoan from '../img/';
-import fotozeji from '../img/'
+import '../css/quienSomos.css';
+import fotoeros from '../assets/images/eros.png';
+import fotojoan from '../assets/images/Joan_diaz.jpg';
+import fotozeji from '../assets/images/sergi_pérez.jpg'
 import { Row, Col } from 'react-bootstrap';
 
 

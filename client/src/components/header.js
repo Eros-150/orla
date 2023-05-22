@@ -1,4 +1,5 @@
 import Nav from 'react-bootstrap/Nav';
+import { NavLink } from 'react-bootstrap';
 import images from '../assets/images.json';
 
 const Header = () => {
@@ -10,13 +11,13 @@ const Header = () => {
         <div className="collapse navbar-collapse mx-2" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-            <Nav.Link href="/Home" className="text-white">Home</Nav.Link>
+            <NavLink href="/Home" className="text-white">Home</NavLink>
             </li>
             <li className="nav-item">
-              <Nav.Link href="/quienSomos" className="text-white">Quienes somos</Nav.Link>
+              <NavLink href="/quienSomos" className="text-white">Quienes somos</NavLink>
             </li>
             <li className="nav-item">
-              <Nav.Link href="/login" className="text-white">Login</Nav.Link>
+              <NavLink href="/login" className="text-white">Login</NavLink>
             </li>
           </ul>
         </div>
