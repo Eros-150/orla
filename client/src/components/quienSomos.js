@@ -31,7 +31,7 @@ export default class AboutUs extends Component {
         </Row>
 
 
-        {/* <marquee>CREADORES: MARC CLAPÉS, ALEIX MARTÍN, JOAN ANGEL DÍAZ Y SERGI PÉREZ</marquee> */}
+        {}
       </div>
     )
   }
