@@ -40,7 +40,8 @@ const Orla = ({ persons }) => {
             />
 
             <div className="card-body">
-              <h5 className="card-title text-center name">{persona.nombre}</h5>
+              <h5 className="card-title text-center">{persona.nombre}</h5>
+              {/* className="name" */}
             </div>
           </div>
 
