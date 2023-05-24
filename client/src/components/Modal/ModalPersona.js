@@ -16,12 +16,13 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
   return (
     <>
       <Modal
+      style={{backgroundImage:"url(https://www.10wallpaper.com/wallpaper/1920x1080/1511/line_light_background-Design_HD_Wallpaper_1920x1080.jpg)"}}
         className="text-center"
         show={personaSeleccionada === persona}
         onHide={handleClose}
       >
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body>
+        <Modal.Header closeButton className="shadow-lg"></Modal.Header>
+        <Modal.Body id="gradient" className="shadow-lg">
           <Modal.Title className="text-center">
               <h1 className="modalTitle">{persona.nombre}</h1>
           </Modal.Title>
@@ -92,7 +93,7 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
           </div>
         </Modal.Body>
 
-        <div className="justify-content-center" style={{ marginBottom: "5%" }}>
+        <div className="justify-content-center shadow-lg" style={{ marginBottom: "5%" }}>
           <div>
             <p>Promoción 2022-23</p>
             <span>© MONLAU GROUP {year}</span>

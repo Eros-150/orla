@@ -53,7 +53,7 @@ const About = () => {
                 "https://media.licdn.com/dms/image/D4D03AQE-8VETv3H45A/profile-displayphoto-shrink_200_200/0/1675171268466?e=1690416000&v=beta&t=0J2ehijGQttbYP9C_2a1v_l24t6PbaWGeO54eGuBUks"
               }
               roundedCircle
-              className="about-image"
+              className="about-image mt-3 mb-3"
             />
 
             <p>
