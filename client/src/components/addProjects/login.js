@@ -72,7 +72,7 @@ const Login = () => {
                     />
                   </Col>
                   <Col md={6}>
-                    <Form onSubmit={handleSubmit} className="text-white">
+                    <Form onSubmit={handleSubmit} className="text-white mt-2">
                       <Form.Group controlId="formBasicName">
                         <Form.Label>Usuario</Form.Label>
                         <Form.Control
@@ -84,7 +84,7 @@ const Login = () => {
                         />
                       </Form.Group>
 
-                      <Form.Group controlId="formBasicPassword">
+                      <Form.Group controlId="formBasicPassword" className="mt-3">
                         <Form.Label className="text-white">
                           Contraseña
                         </Form.Label>

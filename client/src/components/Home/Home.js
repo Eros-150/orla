@@ -13,7 +13,6 @@ const Home = () => {
               Bienvenidos a la Orla de 2DAW 2022-2023
             </marquee>
           </div>
-
           <Carrousel />
         </div>
       </div>
