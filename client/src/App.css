@@ -225,3 +225,11 @@
 .margenNav {
   width: 34.5%;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4%;
+  justify-items: center;
+  align-items: center;
+}
