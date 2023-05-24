@@ -1,13 +1,17 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import Carrousel from "../Carroussel/Carroussel";
+import angular from "../../assets/images/aboutUs/Angular.png";
+import express from "../../assets/images/aboutUs/ExpressJS.png";
+import react from "../../assets/images/aboutUs/react.png";
+import vue from "../../assets/images/aboutUs/Vue.png";
 
 const About = () => {
   return (
     <>
       <h1 className="mt-5 text-center">Sobre Nosotros</h1>
 
-      <Container className="crystal mt-5 py-5 text-white ">
+      <Container className="crystal mt-5 py-5 text-white">
         <p className="text-center">
           Somos unos estudiantes del Grado Superior de Desarrollo de
           Aplicaciones Web y estamos presentando nuestra idea en formato web
@@ -31,7 +35,7 @@ const About = () => {
                 "https://media.licdn.com/dms/image/D4D35AQE7wOjNnPYGLA/profile-framedphoto-shrink_200_200/0/1683039577784?e=1685469600&v=beta&t=IMFXGiKJBCBkI0LjqtKFe2vrFR3iCjg4ffULGicJ9no"
               }
               roundedCircle
-              className="about-image"
+              className="about-image mt-3 mb-3"
             />
 
             <p className="mt-3">
@@ -76,7 +80,7 @@ const About = () => {
                 "https://media.licdn.com/dms/image/D4D03AQEKGEJAYbfnPw/profile-displayphoto-shrink_200_200/0/1666113651999?e=1690416000&v=beta&t=BxmcPnqRQxCFo9o8HU3BWGQn5fn9wt9uhJGZKW0bDNE"
               }
               roundedCircle
-              className="about-image"
+              className="about-image mt-3 mb-3"
               width={200}
             />
             <p className="mt-3">
@@ -87,10 +91,17 @@ const About = () => {
             <p>
               Tengo experiencia usando los siguientes lenguajes: HTML, CSS,
               Java, C# y PHP, aunque he tocado algo de C, C++ y Python y ahora
-              mismo estoy con JavaScript
+              mismo estoy con JavaScript.
             </p>
           </Col>
         </Row>
+
+        <p className="my-5 crystal2">
+            <img src={angular} width={75}/>
+            <img src={express} width={100}/>
+            <img src={react} width={75}/>
+            <img src={vue} width={75}/>
+        </p>
       </Container>
     </>
   );
