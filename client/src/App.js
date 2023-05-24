@@ -9,6 +9,7 @@ import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
 import About from "./components/about/About";
 import Home from "./components/Home/Home";
+import ContactForm from "./components/Contact/ContactForm";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/orla" element={<CompleteOrla />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactForm />} />
       </Routes>
       <Footer />
     </>
