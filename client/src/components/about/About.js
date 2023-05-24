@@ -5,25 +5,25 @@ import Carrousel from "../Carroussel/Carroussel";
 const About = () => {
   return (
     <>
-      <h1 className="title text-center">Sobre Nosotros</h1>
+      <h1 className="mt-5 text-center">Sobre Nosotros</h1>
 
       <Container className="crystal mt-5 py-5 text-white ">
-        <p>
+        <p className="text-center">
           Somos unos estudiantes del Grado Superior de Desarrollo de
           Aplicaciones Web y estamos presentando nuestra idea en formato web
           para el trabajo final de curso.
         </p>
-        <p>
+        <p className="text-center">
           Desde el inicio del proyecto, hemos trabajado para mejorar lo máximo
           posible la visión e idea de nuestro proyecto.
         </p>
-        <p>
+        <p className="text-center">
           Nuestro equipo está compuesto por expertos en el desarrollo de
           aplicaciones web. Trabajamos con pasión y compromiso para ofrecer un
           proyecto de calidad.
         </p>
 
-        <Row>
+        <Row className="mt-5">
           <Col lg={4} md={6} sm={12} className="text-center">
             <h3>Eros Ruiz Ramirez</h3>
             <Image
@@ -34,8 +34,8 @@ const About = () => {
               className="about-image"
             />
 
-            <p>
-              Soy Eros y acabo de termianr el CFGS de DAW, tambien tengo el CFGS
+            <p className="mt-3">
+              Soy Eros y acabo de terminar el CFGS de DAW, tambien tengo el CFGS
               de DAM, soy una persona con muchas ganas de empezar su carrera
               profesional en el sector tecnológico, para así aprender lo máximo
               posible.
@@ -56,8 +56,8 @@ const About = () => {
               className="about-image"
             />
 
-            <p>
-              Soy Joan y acabo de termianr un CFGS de DAW, tengo el CFGS de DAM,
+            <p className="mt-3">
+              Soy Joan y acabo de terminar un CFGS de DAW, tengo el CFGS de DAM,
               ambos en Monlau Formación Profesional.
             </p>
             <p>
@@ -77,9 +77,10 @@ const About = () => {
               }
               roundedCircle
               className="about-image"
+              width={200}
             />
-            <p>
-              Soy Sergi y acabo de termianr el CFGS de DAW (Desarrollo de
+            <p className="mt-3">
+              Soy Sergi y acabo de terminar el CFGS de DAW (Desarrollo de
               Aplicaciones Web) el cual le gusta la programación y en ratos
               libres veo películas/series, leer y escuchar música.
             </p>

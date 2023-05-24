@@ -46,8 +46,8 @@ const FormProjects = ({ username }) => {
       <h1 className="title text-center">Bienvenido, {username}!</h1>
       <h3 className="title text-center">Formulario de Proyectos</h3>
 
-      <Form onSubmit={handleSubmit} className="text-white">
-        <Form.Group controlId="nameProject">
+      <Form onSubmit={handleSubmit} className="text-white m-auto w-50">
+        <Form.Group controlId="nameProject" className="my-3">
           <Form.Label>Nombre del proyecto</Form.Label>
           <Form.Control
             type="text"
@@ -59,7 +59,7 @@ const FormProjects = ({ username }) => {
           />
         </Form.Group>
 
-        <Form.Group controlId="description">
+        <Form.Group controlId="description" className="my-3">
           <Form.Label>Descripción</Form.Label>
           <Form.Control
             type="text"
@@ -71,7 +71,7 @@ const FormProjects = ({ username }) => {
           />
         </Form.Group>
 
-        <Form.Group controlId="url">
+        <Form.Group controlId="url" className="my-3">
           <Form.Label>URL</Form.Label>
           <Form.Control
             type="url"
@@ -87,7 +87,7 @@ const FormProjects = ({ username }) => {
           <Button
             className="button-85"
             type="submit"
-            style={{ marginTop: "5%" }}
+            style={{ marginTop: "3%" }}
           >
             Enviar
           </Button>
