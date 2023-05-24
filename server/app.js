@@ -11,8 +11,6 @@ const Alumno = require("./src/models/alumns");
 const Profesor = require("./src/models/teachers");
 session = require('express-session');
 
-
-
 app.use(
   cors({
     origin: ["http://localhost", "http://localhost:3000"], // CON ESTO DECIMOS DONDE ESTA EL CLIENTE
@@ -118,6 +116,9 @@ app.post("/api/login", async (req, res) => {
       .status(500)
       .json({ error: "Ha ocurrido un error al actualizar la contraseña" });
   }
+  
+
+
 });
 
 app.listen(3001, () => {

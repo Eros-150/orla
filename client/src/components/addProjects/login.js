@@ -100,7 +100,7 @@ const Login = () => {
                         </div>
                         {error && (
                         <div
-                          className="text-danger text-center mt-5 font-weight-bold"
+                          className="text-danger text-center mt-5 fw-bold"
                         >
                           {error}
                         </div>

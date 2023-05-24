@@ -25,11 +25,12 @@ const CompleteOrla = ({}) => {
   return (
     <>
       <div className="container my-5 neon-border crystal2">
-        <h1 className="text-center mt-5 text-white">PROFESORADO</h1>
-        <Orla persons={profes} />
-        <h1 h1 className="text-center mt-5 text-white">
-          ALUMNOS
+        <h1 className="text-center text-white fw-bold mt-5">
+          PROMOCIÓN DAW 2022-2023
         </h1>
+        <h2 className="text-center mt-5 text-white fw-bold">PROFESORADO</h2>
+        <Orla persons={profes} />
+        <h2 className="text-center mt-5 text-white fw-bold">ALUMNOS</h2>
         <Orla persons={alumnos} />
       </div>
     </>
