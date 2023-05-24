@@ -1,14 +1,17 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import django from "../../assets/images/aboutUs/django.png";
 import angular from "../../assets/images/aboutUs/Angular.png";
 import express from "../../assets/images/aboutUs/ExpressJS.png";
 import react from "../../assets/images/aboutUs/react.png";
 import vue from "../../assets/images/aboutUs/Vue.png";
+import node from "../../assets/images/aboutUs/NodeJs.png";
+import laravel from "../../assets/images/aboutUs/Laravel.png";
 
 const About = () => {
   return (
     <>
-      <h1 className="mt-5 text-center">Sobre Nosotros</h1>
+      <h1 className="mt-5 text-center text-white">Sobre Nosotros</h1>
 
       <Container className="crystal mt-5 py-5 text-white">
         <p className="text-center">
@@ -95,11 +98,14 @@ const About = () => {
           </Col>
         </Row>
 
-        <p className="my-5 crystal2">
+        <p className="image-grid my-5 crystal2">
+            <img src={django} width={75}/>
             <img src={angular} width={75}/>
-            <img src={express} width={100}/>
+            <img src={express} width={125}/>
             <img src={react} width={75}/>
             <img src={vue} width={75}/>
+            <img src={node} width={75}/>
+            <img src={laravel} width={75}/>
         </p>
       </Container>
     </>
