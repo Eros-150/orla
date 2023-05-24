@@ -50,8 +50,8 @@ const FormProjects = ({ username }) => {
 
   return (
     <>
-      <h1 className="title text-center">Bienvenido, {username}!</h1>
-      <h3 className="title text-center">Formulario de Proyectos</h3>
+      <h1 className="title text-center mt-5">Bienvenido, {username}!</h1>
+      <h3 className="title text-center mt-3">Formulario de Proyectos</h3>
 
       <Form onSubmit={handleSubmit} className="m-auto w-50">
         <div className="formCool bg-dark text-white mt-5">
