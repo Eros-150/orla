@@ -90,7 +90,7 @@ const FormProjects = ({ username }) => {
           />
         </Form.Group>
 
-        <div className="text-center">
+        <div className="text-center w-25 m-auto">
           <Button
             className="button-85"
             type="submit"
