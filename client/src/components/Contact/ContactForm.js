@@ -1,61 +1,84 @@
-import React, { useState } from 'react';
-import "./contactForm.css"
+import React, { useState } from "react";
 
 const ContactForm = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+    alert("Message sent correctly");
+  };
 
-        setName('');
-        setEmail('');
-        setMessage('');
+  return (
+    <>
+      <h1 className="text-center text-white mt-5">Contactanos</h1>
 
-        alert("Message sent correctly.");
-    };
+      <form className="mx-5 mt-3" onSubmit={handleSubmit}>
+        <div className="formCool bg-dark text-white">
+          <div class="grupo">
+            <input
+              type="text"
+              name=""
+              id=""
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <span class="barra"></span>
+            <label>Nombre</label>
+          </div>
+          <div class="grupo">
+            <input
+              type="email"
+              name=""
+              id=""
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <span class="barra"></span>
+            <label>Email</label>
+          </div>
+          <div class="grupo">
+            <input
+              type="text"
+              name=""
+              id=""
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              required
+            />
+            <span class="barra"></span>
+            <label>Asunto</label>
+          </div>
+          <div class="grupo">
+            <textarea
+              name=""
+              id=""
+              rows="3"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
+            <span class="barra"></span>
+            <label>Mensaje</label>
+          </div>
 
-    return (
-        <div className="contact-form">
-            <h2 className='mt-3'>Contacto</h2>
-            <form onSubmit={handleSubmit}>
-
-                <div className="form-group">
-                    <label htmlFor="name">Nombre:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                </div>
-                
-                <div className="form-group">
-                    <label htmlFor="email">Correo electrónico:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="message">Mensaje:</label>
-                    <textarea
-                        id="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required
-                    ></textarea>
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
+          <div className="text-center mb-5">
+            <button type="submit" className="button-85">
+              Enviar
+            </button>
+          </div>
         </div>
-    );
+      </form>
+    </>
+  );
 };
 
 export default ContactForm;

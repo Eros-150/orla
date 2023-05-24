@@ -23,14 +23,16 @@ const CompleteOrla = ({}) => {
   }, []);
 
   return (
-    <div className="container">
-      <h1 className="text-center mt-5">PROFESORADO</h1>
-      <Orla persons={profes} />
-      <h1 h1 className="text-center mt-5">
-        ALUMNOS
-      </h1>
-      <Orla persons={alumnos} />
-    </div>
+    <>
+      <div className="container my-5 neon-border crystal2">
+        <h1 className="text-center mt-5 text-white">PROFESORADO</h1>
+        <Orla persons={profes} />
+        <h1 h1 className="text-center mt-5 text-white">
+          ALUMNOS
+        </h1>
+        <Orla persons={alumnos} />
+      </div>
+    </>
   );
 };
 

@@ -18,7 +18,7 @@ const Orla = ({ persons }) => {
   };
 
   return (
-    <div className="row crystal" style={{ marginTop: "5%" }}>
+    <div className="row crystal my-5">
       {persons.map((persona) => (
         <div className="col-6 col-sm-4 col-md-2 col-lg-2 col-xl-2">
           <div

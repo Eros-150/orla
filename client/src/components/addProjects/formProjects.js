@@ -35,12 +35,12 @@ const FormProjects = ({ username }) => {
       .then(function (response) {
         console.log(response);
         alert("Project updated correctly!");
-        
+
         setFormData({
           ...formData,
           nameProject: "",
           description: "",
-          url: ""
+          url: "",
         });
       })
       .catch(function (error) {
@@ -53,6 +53,54 @@ const FormProjects = ({ username }) => {
       <h1 className="title text-center">Bienvenido, {username}!</h1>
       <h3 className="title text-center">Formulario de Proyectos</h3>
 
+      <Form onSubmit={handleSubmit} className="m-auto w-50">
+        <div className="formCool bg-dark text-white mt-5">
+          <div class="grupo">
+            <input
+              type="text"
+              id="nameProject"
+              name="nameProject"
+              value={formData.nameProject}
+              onChange={handleChange}
+              required
+            />
+            <span class="barra"></span>
+            <label>Nombre del Proyecto</label>
+          </div>
+          <div class="grupo">
+            <input
+              type="text"
+              id="description"
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+              required
+            />
+            <span class="barra"></span>
+            <label>Descripción del proyecto</label>
+          </div>
+          <div class="grupo">
+            <input
+              type="url"
+              id="url"
+              name="url"
+              value={formData.url}
+              onChange={handleChange}
+              required
+            />
+            <span class="barra"></span>
+            <label>GitHub del proyecto</label>
+          </div>
+
+          <div className="text-center my-3">
+            <button className="button-85" type="submit" block>
+              Ingresar
+            </button>
+          </div>
+        </div>
+      </Form>
+
+      {/*
       <Form onSubmit={handleSubmit} className="text-white m-auto w-50">
         <Form.Group controlId="nameProject" className="my-3">
           <Form.Label>Nombre del proyecto</Form.Label>
@@ -100,6 +148,7 @@ const FormProjects = ({ username }) => {
           </Button>
         </div>
       </Form>
+  */}
     </>
   );
 };

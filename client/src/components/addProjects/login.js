@@ -13,7 +13,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import axios from "axios";
 import "../../App.css";
 import FormProjects from "./formProjects";
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.png";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -62,53 +62,54 @@ const Login = () => {
             >
               <Card.Body>
                 <Row>
-                  <Col md={6} className="border-right text-center text-white">
+                  <Col md={6} className="border-right text-center text-white mt-5">
                     <h4>Iniciar sesión</h4>
                     <p>Por favor, ingrese sus credenciales como alumno</p>
                     <Image
                       src={logo}
                       className="img-fluid"
-                      style={{maxWidth:"35%"}}
+                      style={{ maxWidth: "35%" }}
                     />
                   </Col>
-                  <Col md={6}>
-                    <Form onSubmit={handleSubmit} className="text-white mt-2">
-                      <Form.Group controlId="formBasicName">
-                        <Form.Label>Usuario</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder="Ingrese su usuario"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                        />
-                      </Form.Group>
-
-                      <Form.Group controlId="formBasicPassword" className="mt-3">
-                        <Form.Label className="text-white">
-                          Contraseña
-                        </Form.Label>
-                        <Form.Control
-                          type="password"
-                          placeholder="Ingrese su contraseña"
-                          name="password"
-                          value={formData.password}
-                          onChange={handleChange}
-                        />
-                      </Form.Group>
-                      {error && (
+                  <Col md={6} className="mb-5">
+                    <Form onSubmit={handleSubmit}>
+                      <div className="formCool bg-dark text-white mt-5">
+                        <div class="grupo">
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                          />
+                          <span class="barra"></span>
+                          <label>Nombre</label>
+                        </div>
+                        <div class="grupo">
+                          <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                          />
+                          <span class="barra"></span>
+                          <label>Password</label>
+                        </div>
+                        {error && (
                         <div
-                          className="text-white text-center"
-                          style={{ marginTop: "5%" }}
+                          className="text-danger text-center mt-5 font-weight-bold"
                         >
                           {error}
                         </div>
                       )}
-
-                      <div className="text-center" style={{ marginTop: "5%" }}>
-                        <button className="button-85" type="submit" block>
-                          Ingresar
-                        </button>
+                        <div className="text-center my-3">
+                          <button className="button-85" type="submit" block>
+                            Ingresar
+                          </button>
+                        </div>
                       </div>
                     </Form>
                   </Col>
