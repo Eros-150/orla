@@ -23,10 +23,10 @@ const CompleteOrla = ({}) => {
   }, []);
 
   return (
-    <div className="container">
-      <h1 className="text-center mt-5">PROFESORADO</h1>
+    <div className="container border border-light mt-5" style={{backgroundImage:"url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLbqHsoIMMlQfnVWmbqZli_0DFSSgBYqGopYaiW85WNAmgHBJkehjIfwFXecCzq3lNgFM&usqp=CAU)",backgroundSize:"100% 100%",backgroundRepeat:"no-repeat" }}>
+      <h1 className="text-center mt-5 text-white">PROFESORADO</h1>
       <Orla persons={profes} />
-      <h1 h1 className="text-center mt-5">
+      <h1 h1 className="text-center mt-5 text-white">
         ALUMNOS
       </h1>
       <Orla persons={alumnos} />

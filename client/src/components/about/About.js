@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import Carrousel from "../Carroussel/Carroussel";
 import angular from "../../assets/images/aboutUs/Angular.png";
 import express from "../../assets/images/aboutUs/ExpressJS.png";
 import react from "../../assets/images/aboutUs/react.png";

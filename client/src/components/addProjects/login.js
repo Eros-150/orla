@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import axios from "axios";
 import "../../App.css";
-import FormProjects from "./FormProjects";
+import FormProjects from "./formProjects";
 import logo from "../../assets/images/logo.png"
 
 const Login = () => {
