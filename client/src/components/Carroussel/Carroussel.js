@@ -13,29 +13,25 @@ const Carrousel = () => {
           <Carousel.Item>
             <img className="d-block w-100" src={img1} alt="Primera imagen" />
             <Carousel.Caption>
-              <h3>Título de la primera imagen</h3>
-              <p>Descripción de la primera imagen</p>
+              <h3>Promoción DAM 2018-2020</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={img2} alt="Segunda imagen" />
             <Carousel.Caption>
-              <h3>Título de la segunda imagen</h3>
-              <p>Descripción de la segunda imagen</p>
+              <h3>Promoción SMX 2018-2020</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={img3} alt="Tercera imagen" />
             <Carousel.Caption>
-              <h3>Título de la tercera imagen</h3>
-              <p>Descripción de la tercera imagen</p>
+              <h3>Promoción SMX 2020-2022</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img className="d-block w-100" src={img4} alt="Cuarta imagen" />
             <Carousel.Caption>
-              <h3>Título de la cuarta imagen</h3>
-              <p>Descripción de la cuarta imagen</p>
+              <h3>Promoción ASIX 2018-2020</h3>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
