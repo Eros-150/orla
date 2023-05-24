@@ -14,12 +14,12 @@ const About = () => {
       <h1 className="mt-5 text-center text-white">Sobre Nosotros</h1>
 
       <Container className="crystal mt-5 py-5 text-white">
-        <p className="text-center">
+        <p className="text-center fs-4 mx-5">
           Somos unos estudiantes del Grado Superior de Desarrollo de
-          Aplicaciones Web y estamos presentando nuestra idea en formato web
-          para el trabajo final de curso.
+          Aplicaciones Web y estamos presentando nuestra idea para el proyecto
+          final de la web de nuestra clase.
         </p>
-        <p className="text-center">
+        {/* <p className="text-center">
           Desde el inicio del proyecto, hemos trabajado para mejorar lo máximo
           posible la visión e idea de nuestro proyecto.
         </p>
@@ -27,7 +27,7 @@ const About = () => {
           Nuestro equipo está compuesto por expertos en el desarrollo de
           aplicaciones web. Trabajamos con pasión y compromiso para ofrecer un
           proyecto de calidad.
-        </p>
+        </p> */}
 
         <Row className="mt-5">
           <Col lg={4} md={6} sm={12} className="text-center">
