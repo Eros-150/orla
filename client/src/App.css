@@ -28,6 +28,26 @@
     100%{background-position:10% 0%}
 }
 
+/**/
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 7s linear infinite; /* Ajusta la duración de la animación según tu preferencia */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .marquee1 {
   background: linear-gradient(90deg, #2962ff, #2962ff 6.02%, #726fff 28.12%, #c883ff 41.15%, #ab4df8 54.69%, #d1007e 69.27%, #dc132b 90.9%, #dc132b);
