@@ -2,6 +2,33 @@
   display: none;
 }
 
+#gradient
+{
+    background: linear-gradient(130deg, #ff7e00, #ffffff, #5cff00);
+    background-size: 200% 200%;
+
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+
 .marquee1 {
   background: linear-gradient(90deg, #2962ff, #2962ff 6.02%, #726fff 28.12%, #c883ff 41.15%, #ab4df8 54.69%, #d1007e 69.27%, #dc132b 90.9%, #dc132b);
   background-repeat: no-repeat;
