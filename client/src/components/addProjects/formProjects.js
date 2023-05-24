@@ -34,7 +34,14 @@ const FormProjects = ({ username }) => {
       .put(URL, formData)
       .then(function (response) {
         console.log(response);
-        // PONER UNA ALERTA QUE RECIBA EL TEXTO DE DATOS INSERTADOS O DATOS REPETIDOS (NMO INSERTAR)
+        alert("Project updated correctly!");
+        
+        setFormData({
+          ...formData,
+          nameProject: "",
+          description: "",
+          url: ""
+        });
       })
       .catch(function (error) {
         console.log(error);

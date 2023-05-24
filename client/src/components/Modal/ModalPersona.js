@@ -16,7 +16,7 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
   return (
     <>
       <Modal
-      style={{backgroundImage:"url(https://www.10wallpaper.com/wallpaper/1920x1080/1511/line_light_background-Design_HD_Wallpaper_1920x1080.jpg)"}}
+        style={{ backgroundImage: "url(https://www.10wallpaper.com/wallpaper/1920x1080/1511/line_light_background-Design_HD_Wallpaper_1920x1080.jpg)" }}
         className="text-center"
         show={personaSeleccionada === persona}
         onHide={handleClose}
@@ -24,7 +24,7 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
         <Modal.Header closeButton className="shadow-lg"></Modal.Header>
         <Modal.Body id="gradient" className="shadow-lg">
           <Modal.Title className="text-center">
-              <h1 className="modalTitle">{persona.nombre}</h1>
+            <h1 className="modalTitle">{persona.nombre}</h1>
           </Modal.Title>
           <div className="text-center">
             <Image
@@ -49,7 +49,7 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
                   <Accordion.Body>
                     {persona.proyectos.map((proyecto) => (
                       <div className="proyecto-container">
-                        <a href={proyecto.url}><h4>{proyecto.nombre}</h4></a>
+                        <a href={proyecto.url} target="_blank"><h4>{proyecto.nombre}</h4></a>
                         <p>{proyecto.descripcion}</p>
                       </div>
                     ))}
@@ -82,10 +82,11 @@ const ModalPersona = ({ persona, personaSeleccionada, handleClose }) => {
               <Accordion.Item eventKey={0}>
                 <Accordion.Header>CONTACTO</Accordion.Header>
                 <Accordion.Body>
-                  <div>
-                    <a href="mailto:{persona.contacto.email}">
+                  <div className="m-auto">
+                    <a href={"mailto:" + persona.contacto.email} className="mx-3">
                       <FontAwesomeIcon icon={faEnvelope} fade size="2xl" /></a>
-                    <a href="{persona.contacto.linkedin}"><FontAwesomeIcon icon={faLinkedinIn} fade size="2xl" /></a>
+                    <a href={persona.contacto.linkedin} className="mx-3" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} fade size="2xl" /></a>
+
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
