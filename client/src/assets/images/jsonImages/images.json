@@ -1,14 +1,17 @@
 [
     {
         "id": 1,
-        "imageUrl": "https://www.monlau.com/estudis-professionals/wp-content/uploads/sites/3/2020/07/monlau-fp-es.png"
+        "imageUrl": "https://www.monlau.com/estudis-professionals/wp-content/uploads/sites/3/2020/07/monlau-fp-es.png",
+        "web": "https://www.monlau.com/formacio-professional/"
     },
     {
         "id": 2,
-        "imageUrl": "https://www.monlau.com/wp-content/uploads/2023/03/Logo-MONLAU-Eso-Bachillerato-marco-CMYK.jpg"
+        "imageUrl": "https://www.monlau.com/wp-content/uploads/2023/03/Logo-MONLAU-Eso-Bachillerato-marco-CMYK.jpg",
+        "web": "https://www.monlau.com/eso-batxillerat/?lang=es"
     },
     {
         "id": 3,
-        "imageUrl": "https://www.monlau.com/wp-content/uploads/2023/03/Logo-MONLAU-Corporate-marco-CMYK.jpg"
+        "imageUrl": "https://www.monlau.com/wp-content/uploads/2023/03/Logo-MONLAU-Corporate-marco-CMYK.jpg",
+        "web": "https://www.monlau.com/corporate/"
     }
 ]
